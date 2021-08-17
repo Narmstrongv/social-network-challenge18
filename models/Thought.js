@@ -40,4 +40,4 @@ const ThoughtSchema = new Schema(
 
 const Thought = model('Thought', ThoughtSchema);
 
-module.exports = Pizza;
+module.exports = Thought;

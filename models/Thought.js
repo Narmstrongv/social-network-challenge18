@@ -23,5 +23,21 @@ const ThoughtSchema = new Schema(
         reactions: {
             //array of nested documents created with 'reactionSchema'
         }
+    },
+
+    {
+        toJSON: {
+            virtuals: true,
+            getters: true
+        },
+        id: false
     }
-)
+);
+
+//virtual that retrieves length of the thoughts 'reactions' array field on query
+// ThoughtSchema.virtual('reactionCount').get(function() {
+// });
+
+const Thought = model('Thought', ThoughtSchema);
+
+module.exports = Pizza;

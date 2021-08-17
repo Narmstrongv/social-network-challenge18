@@ -17,27 +17,27 @@ const UserSchema = new Schema(
             //must match valid email address (mongoose: matching validation)
         },
 
-        thoughts: {
-            //array of _id values ref Thought model
-        },
+        // thoughts: {
+        //     //array of _id values ref Thought model
+        // },
 
-        friends: {
-            //array of _id values refereing User model(self-reference)
-        },
+        // friends: {
+        //     //array of _id values refereing User model(self-reference)
+        // },
         
         //comments: required?
 
 
-    },
-
-    {
-        toJSON: {
-            virtuals: true,
-            //need getters?
-            getters: true
-        },
-        id: false
     }
+
+    // {
+    //     toJSON: {
+    //         virtuals: true,
+    //         //need getters?
+    //         getters: true
+    //     },
+    //     id: false
+    // }
 );
 
 //virtual that retrueves length of users 'friends' array field on query
